@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portify</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <link rel="stylesheet" href="/static/styles1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo-container">
+        <img src="/homepage/logo11.png" alt="Portify Logo" class="logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#templates">Templates</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="/templates/login.html" class="btn-login">Login/Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Create Your Stunning Portfolio in Minutes</h1>
+      <p>Showcase your skills, achievements, and creativity with ease.</p>
+      <div class="cta-buttons">
+        <a href="/templates/index.html" class="btn-primary">Get Started For Free</a>
+        <a href="#learn-more" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Why Choose Portify?</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <h3>Easy Customization</h3>
+        <p>Create personalized portfolios with unique themes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Responsive Design</h3>
+        <p>Your portfolio looks stunning on any device.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fast and Secure</h3>
+        <p>Speedy performance with data privacy assured.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Choose a Template</h3>
+        <p>Browse from a variety of beautiful templates.</p>
+      </div>
+      <div class="step">
+        <h3>2. Customize Your Portfolio</h3>
+        <p>Add text, images, and your personal touch.</p>
+      </div>
+      <div class="step">
+        <h3>3. Publish & Share</h3>
+        <p>Share your live portfolio with the world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How much does it cost to create a portfolio?</span>
+        <span class="arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>We offer a free plan with essential features.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I customize the design of my portfolio?</span>
+        <span class="arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes! Our intuitive customization tool allows you to edit themes, fonts, colors, and layout.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do I need coding skills to use this platform?</span>
+        <span class="arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Absolutely not! Our platform is beginner-friendly and requires zero coding knowledge.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I add my own domain to the portfolio?</span>
+        <span class="arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, you can connect a custom domain to your portfolio with our free plan.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is my data safe and secure?</span>
+        <span class="arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>We prioritize your privacy and security. Your data is encrypted and never shared.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Portify. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Toggle Logic
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+
+        // Rotate arrow
+        const arrow = question.querySelector('.arrow');
+        arrow.style.transform = answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
