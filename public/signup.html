@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Portify</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">
+  <link rel="stylesheet" href="/public/sytles_login.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Signup Section -->
+  <div class="signup-container">
+    <div class="login-form">
+      <h1>Join Portify Today</h1>
+    
+      <!-- Sign-Up Form -->
+      <form action="signup.html" method="POST" class="form">
+        <h2>Sign Up</h2>
+
+        
+
+        <div class="input-group">
+          <label for="signup-username">Username</label>
+          <input type="text" id="signup-username" name="username" placeholder="Create a username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Sign Up</button>
+
+        <p class="divider"><span>or</span></p>
+
+        <!-- Social Sign Up -->
+        <button type="button" class="btn-google">
+          <img src="/public/images/Google.png" alt="Google Logo" class="social-logo">
+          Sign up with Google
+        </button>
+
+        <button type="button" class="btn-facebook">
+          <img src="/public/images/Facebook.png" alt="Facebook Logo" class="social-logo">
+          Sign up with Facebook
+        </button>
+
+        <p class="login-option">Already have an account? <a href="/public/login.html" class="login-link">Login</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

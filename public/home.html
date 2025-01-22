@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portify</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="/static/styles1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo-container">
+        <img src="/homepage/logo11.png" alt="Portify Logo" class="logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#templates">Templates</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="/templates/login.html" class="btn-login">Login/Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1 data-aos="fade-up">Create Your Stunning Portfolio in Minutes</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Showcase your skills, achievements, and creativity with ease.</p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+          <a href="/templates/index.html" class="btn-primary">Get Started For Free</a>
+          <a href="#learn-more" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 data-aos="fade-up">Why Choose Portify?</h2>
+      <div class="feature-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Easy Customization</h3>
+          <p>Create personalized portfolios with unique themes.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Responsive Design</h3>
+          <p>Your portfolio looks stunning on any device.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Fast and Secure</h3>
+          <p>Speedy performance with data privacy assured.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 data-aos="fade-up">How It Works</h2>
+      <div class="steps-container">
+        <div class="step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">1</div>
+          <h3>Choose a Template</h3>
+          <p>Browse from a variety of beautiful templates.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">2</div>
+          <h3>Customize Your Portfolio</h3>
+          <p>Add text, images, and your personal touch.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">3</div>
+          <h3>Publish & Share</h3>
+          <p>Share your live portfolio with the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Templates Section -->
+<section class="templates" id="templates">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Choose Your Perfect Template</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Browse through our professionally designed templates</p>
+    </div>
+    
+    <div class="templates-grid">
+      <!-- Template cards remain the same -->
+      <div class="template-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="template-image">
+          <img src="/static/template2-thumb.png" alt="Minimal Portfolio Template">
+          <div class="template-overlay">
+            <a href="/templates/template2.html" class="see-template-btn">See Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <h3>Minimal Portfolio</h3>
+          <p>Clean and modern design for creatives</p>
+        </div>
+      </div>
+
+      <div class="template-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="template-image">
+          <img src="/static/template1-thumb.png" alt="Developer Portfolio Template">
+          <div class="template-overlay">
+            <a href="/templates/template1.html" class="see-template-btn">See Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <h3>Developer Portfolio</h3>
+          <p>Perfect for showcasing coding projects</p>
+        </div>
+      </div>
+
+      <div class="template-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="template-image">
+          <img src="/static/template3-thumb.png" alt="Creative Portfolio Template">
+          <div class="template-overlay">
+            <a href="/templates/template3.html" class="see-template-btn">See Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <h3>Creative Portfolio</h3>
+          <p>Showcase your artistic projects</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ Section -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How much does it cost to create a portfolio?</span>
+          <span class="faq-arrow">&#9662;</span>
+        </div>
+        <div class="faq-answer">
+          <p>We offer a free plan with essential features.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I customize the design of my portfolio?</span>
+          <span class="faq-arrow">&#9662;</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! Our intuitive customization tool allows you to edit themes, fonts, colors, and layout.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do I need coding skills to use this platform?</span>
+          <span class="faq-arrow">&#9662;</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely not! Our platform is beginner-friendly and requires zero coding knowledge.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I add my own domain to the portfolio?</span>
+          <span class="faq-arrow">&#9662;</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, you can connect a custom domain to your portfolio with our free plan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Is my data safe and secure?</span>
+          <span class="faq-arrow">&#9662;</span>
+        </div>
+        <div class="faq-answer">
+          <p>We prioritize your privacy and security. Your data is encrypted and never shared.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        // Get parent faq-item
+        const faqItem = question.parentElement;
+        const answer = question.nextElementSibling;
+        const arrow = question.querySelector('.faq-arrow');
+        
+        // Close all other answers
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem && item.classList.contains('active')) {
+            item.classList.remove('active');
+            item.querySelector('.faq-answer').style.maxHeight = null;
+            item.querySelector('.faq-arrow').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current answer
+        faqItem.classList.toggle('active');
+        if (faqItem.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          answer.style.maxHeight = null;
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
+</section>
+<!-- Footer Section -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p class="copyright">© 2024 Portify. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer Styles */
+.footer {
+  background-color: #0f172a; /* Same as navbar */
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: #f97316; /* Orange color on hover, matching navbar accent */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 1.5rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+/* Updated Templates Section Styles */
+.templates {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  color: #0f172a;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.template-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+  transform: translateY(-5px);
+}
+
+.template-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.template-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.template-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.template-card:hover .template-overlay {
+  opacity: 1;
+}
+
+.preview-btn, .see-template-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.preview-btn {
+  background: white;
+  color: #0f172a;
+  border: none;
+}
+
+.see-template-btn {
+  background: #f97316;
+  color: white;
+  text-decoration: none;
+}
+
+.preview-btn:hover, .see-template-btn:hover {
+  transform: scale(1.05);
+}
+
+.template-info {
+  padding: 1.5rem;
+}
+
+.template-info h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+.template-info p {
+  margin: 0.5rem 0 0;
+  color: #64748b;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  margin: 2vh auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.preview-container {
+  height: calc(100% - 60px);
+  margin-bottom: 1rem;
+}
+
+#previewFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.preview-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.device-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.device-btn.active {
+  background: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
+@media (max-width: 768px) {
+  .templates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    width: 95%;
+    height: 95vh;
+    padding: 1rem;
+  }
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+
+    // FAQ Toggle Logic
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const arrow = question.querySelector('.arrow');
+        
+        // Close all other answers
+        document.querySelectorAll('.faq-answer').forEach(item => {
+          if (item !== answer) {
+            item.style.maxHeight = null;
+            item.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current answer
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          arrow.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          arrow.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    function openPreview(templateId) {
+  const modal = document.getElementById('previewModal');
+  const previewFrame = document.getElementById('previewFrame');
+  
+  // Set the preview URL based on template ID
+  previewFrame.src = `/templates/preview/${templateId}`;
+  modal.style.display = 'block';
+  
+  // Close modal when clicking outside
+  modal.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+  
+  // Close modal when clicking X
+  document.querySelector('.close-modal').onclick = function() {
+    modal.style.display = 'none';
+  }
+}
+
+// Device preview buttons
+document.querySelectorAll('.device-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const device = this.dataset.device;
+    const frame = document.getElementById('previewFrame');
+    
+    // Remove active class from all buttons
+    document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+    // Add active class to clicked button
+    this.classList.add('active');
+    
+    // Adjust iframe width based on device
+    switch(device) {
+      case 'desktop':
+        frame.style.width = '100%';
+        break;
+      case 'tablet':
+        frame.style.width = '768px';
+        break;
+      case 'mobile':
+        frame.style.width = '375px';
+        break;
+    }
+  });
+});
+  </script>
+</body>
+</html>

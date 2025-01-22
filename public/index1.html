@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Portify</h1>
+        <p>Create and showcase your personalized portfolio</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="portfolioForm" enctype="multipart/form-data">
+                <!-- Form fields remain the same -->
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="education">Education</label>
+                <input type="text" id="education" name="education" placeholder="Enter your education" required>
+
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" placeholder="Write a short bio about yourself" rows="4" required></textarea>
+
+                <label for="job">Currently Working As</label>
+                <input type="text" id="job" name="job" placeholder="Your current position (e.g., Software Engineer)">
+
+                <label for="projects">Completed Projects</label>
+                <textarea id="projects" name="projects" placeholder="List your projects (comma-separated)" rows="3"></textarea>
+
+                <label for="passions">Passionate In</label>
+                <input type="text" id="passions" name="passions" placeholder="e.g., AI, Robotics, Web Development">
+
+                <label for="resume">Upload Your Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.docx,.doc">
+
+                <label for="template">Select a Portfolio Template</label>
+                <select id="template" name="template" required>
+                    <option value="" disabled selected>Select a template</option>
+                    <option value="minimal">Minimal</option>
+                    <option value="developer">Developer</option>
+                    <option value="creative">Creative</option>
+                </select>
+
+                <label for="photo">Upload Your Photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+
+                <label for="futureGoals">Future Goals</label>
+                <textarea id="futureGoals" name="futureGoals" placeholder="List your future goals" rows="3"></textarea>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="socialLinks">Social Media Links</label>
+                <input type="url" id="socialLinks" name="socialLinks" placeholder="Link to your LinkedIn, GitHub, etc.">
+
+                <button type="submit" id="submitBtn">Submit Portfolio</button>
+            </form>
+            
+            <!-- Add a loading indicator and message display -->
+            <div id="loadingIndicator" style="display: none;">
+                Submitting your portfolio...
+            </div>
+            <div id="messageDisplay"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Portify | All Rights Reserved</p>
+    </footer>
+    <script>
+        document.getElementById('portfolioForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const messageDisplay = document.getElementById('messageDisplay');
+            
+            try {
+                // Disable submit button and show loading
+                submitBtn.disabled = true;
+                loadingIndicator.style.display = 'block';
+                messageDisplay.textContent = '';
+
+                const formData = new FormData(form);
+
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    messageDisplay.style.color = 'green';
+                    messageDisplay.textContent = result.message;
+                    form.reset();
+                } else {
+                    messageDisplay.style.color = 'red';
+                    messageDisplay.textContent = result.message || 'Submission failed. Please try again.';
+                }
+            } catch (error) {
+                messageDisplay.style.color = 'red';
+                messageDisplay.textContent = 'An error occurred. Please try again later.';
+                console.error('Error:', error);
+            } finally {
+                // Re-enable submit button and hide loading
+                submitBtn.disabled = false;
+                loadingIndicator.style.display = 'none';
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

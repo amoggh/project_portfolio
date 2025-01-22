@@ -29,13 +29,13 @@ def login():
         
         if user and check_password_hash(user['password'], password):
             session['username'] = username
-            flash('Login successful!', 'success')
+            flash('Welcome back! You have successfully logged in.', 'success')
             return redirect(url_for('dashboard'))
         else:
-            flash('Invalid username or password', 'error')
+            flash('Invalid username or password. Please try again.', 'error')
             return redirect(url_for('login'))
     
-    return render_template('login.html')
+    return render_template('/login.html')
 
 # Sign-up Page
 @app.route('/signup', methods=['GET', 'POST'])
@@ -46,25 +46,28 @@ def signup():
         password = request.form['password']
 
         existing_user = mongo.db.users.find_one({'username': username})
+        existing_email = mongo.db.users.find_one({'email': email})
         
         if existing_user:
-            flash('Username already exists. Try a different one.', 'error')
+            flash('This username is already taken. Please choose another one.', 'error')
             return redirect(url_for('signup'))
         
-        # Hash the password before saving it
+        if existing_email:
+            flash('An account with this email already exists. Please login instead.', 'error')
+            return redirect(url_for('signup'))
+        
         hashed_password = generate_password_hash(password)
         
-        # Save the new user to the database
         mongo.db.users.insert_one({
             'username': username,
             'email': email,
             'password': hashed_password
         })
         
-        flash('Account created successfully! Please log in.', 'success')
+        flash('Your account has been created successfully! Please login.', 'success')
         return redirect(url_for('login'))
     
-    return render_template('signup.html')
+    return render_template('/signup.html')
 
 # Dashboard (After successful login)
 @app.route('/dashboard')
@@ -82,6 +85,33 @@ def logout():
     flash('You have been logged out.', 'success')
     return redirect(url_for('login'))
 
-# Run the app
+# Examples of using flash messages in your routes:
+
+# For success messages
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        if user_authenticated:
+            flash('Successfully logged in!', 'success')
+        else:
+            flash('Invalid username or password', 'error')
+    return render_template('login.html')
+
+# For signup success
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        if user_created:
+            flash('Account created successfully! Please log in.', 'success')
+        elif username_exists:
+            flash('Username already exists. Please choose another.', 'error')
+        elif email_exists:
+            flash('Email already registered. Please login instead.', 'error')
+    return render_template('signup.html')
+
+# You can also use warning and info categories
+flash('Please verify your email address.', 'warning')
+flash('Maintenance scheduled for tomorrow.', 'info')
+
 if __name__ == '__main__':
     app.run(debug=True)

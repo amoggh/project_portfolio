@@ -1,0 +1,25 @@
+{
+    "name": "project_portfolio",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.21.2",
+        "multer": "^1.4.5-lts.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amoggh/project_portify.git"
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://github.com/amoggh/project_portify/issues"
+    },
+    "homepage": "https://github.com/amoggh/project_portify#readme",
+    "description": ""
+}
